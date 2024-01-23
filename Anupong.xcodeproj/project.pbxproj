@@ -22,6 +22,10 @@
 		F14936F82B5FBCF900FF21E9 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = F14936F72B5FBCF900FF21E9 /* RswiftLibrary */; };
 		F14936FA2B5FBCF900FF21E9 /* rswift in Frameworks */ = {isa = PBXBuildFile; productRef = F14936F92B5FBCF900FF21E9 /* rswift */; };
 		F14937012B5FBF2500FF21E9 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14937002B5FBF2500FF21E9 /* AppInfo.swift */; };
+		F1AB89AC2B5FFE7E000E1B13 /* CoinListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB89A82B5FFE7E000E1B13 /* CoinListView.swift */; };
+		F1AB89AD2B5FFE7E000E1B13 /* CoinListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB89A92B5FFE7E000E1B13 /* CoinListViewModel.swift */; };
+		F1AB89AE2B5FFE7E000E1B13 /* CoinList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AB89AA2B5FFE7E000E1B13 /* CoinList.swift */; };
+		F1AB89B32B600DCB000E1B13 /* OptionallyDecodable in Frameworks */ = {isa = PBXBuildFile; productRef = F1AB89B22B600DCB000E1B13 /* OptionallyDecodable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,9 @@
 		F14936E92B5F8BC300FF21E9 /* EndpointsStore.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = EndpointsStore.plist; sourceTree = "<group>"; };
 		F14936F42B5FBB5600FF21E9 /* EndpointsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointsStore.swift; sourceTree = "<group>"; };
 		F14937002B5FBF2500FF21E9 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		F1AB89A82B5FFE7E000E1B13 /* CoinListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListView.swift; sourceTree = "<group>"; };
+		F1AB89A92B5FFE7E000E1B13 /* CoinListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewModel.swift; sourceTree = "<group>"; };
+		F1AB89AA2B5FFE7E000E1B13 /* CoinList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1AB89B32B600DCB000E1B13 /* OptionallyDecodable in Frameworks */,
 				F14936F82B5FBCF900FF21E9 /* RswiftLibrary in Frameworks */,
 				F14936EF2B5FAEB000FF21E9 /* Moya in Frameworks */,
 				F14936ED2B5FAEB000FF21E9 /* CombineMoya in Frameworks */,
@@ -75,6 +83,7 @@
 		F14936D22B5F809600FF21E9 /* Anupong */ = {
 			isa = PBXGroup;
 			children = (
+				F149370D2B5FFD3800FF21E9 /* CoinList */,
 				F14936D32B5F809600FF21E9 /* AppDelegate.swift */,
 				F14936D52B5F809600FF21E9 /* SceneDelegate.swift */,
 				F14936D72B5F809600FF21E9 /* ViewController.swift */,
@@ -112,6 +121,16 @@
 			path = AppInfo;
 			sourceTree = "<group>";
 		};
+		F149370D2B5FFD3800FF21E9 /* CoinList */ = {
+			isa = PBXGroup;
+			children = (
+				F1AB89A82B5FFE7E000E1B13 /* CoinListView.swift */,
+				F1AB89A92B5FFE7E000E1B13 /* CoinListViewModel.swift */,
+				F1AB89AA2B5FFE7E000E1B13 /* CoinList.swift */,
+			);
+			path = CoinList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,6 +155,7 @@
 				F14936F22B5FAEB000FF21E9 /* RxMoya */,
 				F14936F72B5FBCF900FF21E9 /* RswiftLibrary */,
 				F14936F92B5FBCF900FF21E9 /* rswift */,
+				F1AB89B22B600DCB000E1B13 /* OptionallyDecodable */,
 			);
 			productName = Anupong;
 			productReference = F14936D02B5F809600FF21E9 /* Anupong.app */;
@@ -168,6 +188,7 @@
 			packageReferences = (
 				F14936EB2B5FAEB000FF21E9 /* XCRemoteSwiftPackageReference "Moya" */,
 				F14936F62B5FBCF900FF21E9 /* XCRemoteSwiftPackageReference "R.swift" */,
+				F1AB89B12B600DCB000E1B13 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */,
 			);
 			productRefGroup = F14936D12B5F809600FF21E9 /* Products */;
 			projectDirPath = "";
@@ -202,6 +223,9 @@
 				F14936D82B5F809600FF21E9 /* ViewController.swift in Sources */,
 				F14936D42B5F809600FF21E9 /* AppDelegate.swift in Sources */,
 				F14936D62B5F809600FF21E9 /* SceneDelegate.swift in Sources */,
+				F1AB89AC2B5FFE7E000E1B13 /* CoinListView.swift in Sources */,
+				F1AB89AE2B5FFE7E000E1B13 /* CoinList.swift in Sources */,
+				F1AB89AD2B5FFE7E000E1B13 /* CoinListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +471,14 @@
 				minimumVersion = 7.4.0;
 			};
 		};
+		F1AB89B12B600DCB000E1B13 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/idrougge/OptionallyDecodable.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -484,6 +516,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F14936F62B5FBCF900FF21E9 /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = "plugin:RswiftGenerateInternalResources";
+		};
+		F1AB89B22B600DCB000E1B13 /* OptionallyDecodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1AB89B12B600DCB000E1B13 /* XCRemoteSwiftPackageReference "OptionallyDecodable" */;
+			productName = OptionallyDecodable;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

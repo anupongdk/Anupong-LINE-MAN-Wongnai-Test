@@ -45,7 +45,6 @@ extension AppEndpoints {
     var key: String {
         ""
     }
-
     var method: Moya.Method {
         .get
     }
@@ -64,5 +63,47 @@ extension AppEndpoints {
 
     var headers: [String: String]? {
         ["content-type": "application/json"]
+    }
+}
+
+
+enum Endpoints {
+    
+    enum coin: AppEndpoints {
+        typealias R = String
+        case coin
+        case search([String: Any])
+        case coinDetail(String)
+
+        var path: String {
+            let path = ApiEndPointStore.shared.find(endpoint: self)
+            switch self {
+            case .coinDetail(let uuid):
+                return String(format: path, "\(uuid)")
+            default:
+                return path
+            }
+        }
+
+        var key: String {
+            switch self {
+            case .coin: return "coin"
+            case .search: return "search"
+            case .coinDetail: return "coin-detail"
+            }
+        }
+
+        var method: Moya.Method {
+            .get
+        }
+
+        var task: Task {
+            switch self {
+            case .search(let req):
+                return .requestParameters(parameters: req, encoding: URLEncoding.queryString)
+            default:
+                return .requestPlain
+            }
+        }
     }
 }
