@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   EndpointsStore.plist
+   Anupong
+
+   Created by gone on 23/1/2567 BE.
+   Copyright (c) 2567 BE ___ORGANIZATIONNAME___. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>name</key>
+            <string>coins</string>
+            <key>path</key>
+            <string>/v2/coins</string>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>search</string>
+            <key>path</key>
+            <string>/v2/coins?search</string>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>coin-uuid</string>
+            <key>path</key>
+            <string>/v2/coin/</string>
+        </dict>
+    </array>
+    </plist>
