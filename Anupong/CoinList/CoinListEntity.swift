@@ -9,12 +9,12 @@ import Foundation
 import OptionallyDecodable
 
 // MARK: - CoinRanking
-struct CoinRankingResponse: Codable {
+struct CoinListResponse: Codable {
     let status: String
-    let data: CoinRankingResponseData
+    let data: CoinListResponseData
 }
 
-struct CoinRankingSearchRequest: Encodable {
+struct CoinListSearchRequest: Encodable {
     var search: String
 
     enum CodingKeys: String, CodingKey {
@@ -30,7 +30,7 @@ struct CoinRankingSearchRequest: Encodable {
 }
 
 // MARK: - DataClass
-struct CoinRankingResponseData: Codable {
+struct CoinListResponseData: Codable {
     let stats: CoinStats
     let coins: [Coin]
 }

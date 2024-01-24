@@ -14,6 +14,14 @@ struct EndpointStore: Codable {
     var path: String
 }
 
+protocol EndpointProtocol: TargetType {
+    associatedtype R
+    var key: R { get }
+    var method: Moya.Method { get }
+}
+
+protocol AppEndpoints: EndpointProtocol {}
+
 struct ApiEndPointStore {
     private var _allEndpoints: [EndpointStore]?
 
@@ -32,14 +40,6 @@ struct ApiEndPointStore {
         _allEndpoints?.filter { $0.name == endpoint.key as! String }.first?.path ?? ""
     }
 }
-
-protocol EndpointProtocol: TargetType {
-    associatedtype R
-    var key: R { get }
-    var method: Moya.Method { get }
-}
-
-protocol AppEndpoints: EndpointProtocol {}
 
 extension AppEndpoints {
     var key: String {
